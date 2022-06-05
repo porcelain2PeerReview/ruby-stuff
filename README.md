@@ -46,7 +46,7 @@ Example of config file in .ssh directory <br>
 # Creating a New Remote Repository
 - Create Repository Remotely <br>
 ```
-curl -u '<user-name>' -H "Authorization: token <pat-token>" https://api.github.com/users/repos -d '{"name":"<new-repository-name"}'
+curl -u '<user-name>' -H "Authorization: token <pat-token>" https://api.github.com/users/repos -d '{"name":"<new-repository-name","private":"true"}'
 ```
 - First Commit: <br>
 ```
