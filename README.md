@@ -3,13 +3,13 @@ Just trying to learn some ruby my dude
 setting up a simple default dev environment for the ol ruby on rails
 
 # Prerequisites:
-  working on linux or a linux type vm/containered   <br> 
-  .ssh key pair generated and available in your .ssh location  <br> 
-  public key added to github  <br> 
-  PAT (Personal Access Token) to create repository remotely  <br> 
-  config file setup to reference your private key  <br> 
-  proper permissions set on your private key (600 will work fine: chmod 600 ~/.ssh/<private-key>)  <br> 
-  running all docker scripts from the perspective of your user you wish to dev on  <br> 
+  - Working on linux or a linux type vm/containered <br> 
+  - .ssh key pair generated and available in your .ssh location <br> 
+  - Public key added to github  <br> 
+  - PAT (Personal Access Token) to create repository remotely <br> 
+  - Config file setup to reference your private key <br> 
+  - Proper permissions set on your private key (600 will work fine: chmod 600 ~/.ssh/<private-key>) <br> 
+  - Running all docker scripts from the perspective of your user you wish to dev on <br> 
   
 Example of config file in .ssh directory
   
