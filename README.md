@@ -4,6 +4,7 @@ setting up a simple default dev environment for the ol ruby on rails
 
 # Prerequisites:
   - Working on linux or a linux type vm/containered <br> 
+  - Docker.io installed on host machine
   - .ssh key pair generated and available in your .ssh location <br> 
   - Public key added to github  <br> 
   - PAT (Personal Access Token) to create repository remotely <br> 
