@@ -5,7 +5,8 @@ RUN apt-get update \
   && npm install -g yarn \
   && apt-get install libsqlite3-dev -y \
   && apt install ruby-dev -y \
-  && mkdir -p /var/app
+  && mkdir -p /var/appi \
+  && mkdir -p ~/.ssh
 
 WORKDIR /var/app
 COPY ./Gemfile /var/app
@@ -18,5 +19,5 @@ EXPOSE 3000
 
 WORKDIR /var/app
 
-# CMD rails s -b 0.0.0.0
+# CMD rails s -b 0.0.0.0 -p 3000
 CMD /bin/bash
