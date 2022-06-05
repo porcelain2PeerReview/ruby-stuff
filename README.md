@@ -25,22 +25,29 @@ Example of config file in .ssh directory
     StrictHostKeyChecking no
 ```
     
-# Setup
+# Local Docker Dev Environment Setup
 
-- clone the repository to your local directory of choosing
-- run the startup script, including the name of your development container
-  example: start-dev.sh <desired-container-name>
-- login to the docker container: sudo docker exec -it <container-name> bash
-- rails new <project-name>
-- git init
   
-# Creating Repository Remotely
-**requires PAT key**
+- Clone the repository to your local directory of choosing
+- run the startup script, including the name of your development container
+```
+  example: start-dev.sh <desired-container-name>
+```
+- login to the docker container: 
+``
+  sudo docker exec -it <container-name> bash
+``
+- create a new project
+```
+  rails new <project-name>
+```
+  
+# Creating a New Remote Repository
 - Create Repository Remotely
 ```
 curl -u '<user-name>' -H "Authorization: token <pat-token>" https://api.github.com/users/repos -d '{"name":"<new-repository-name"}'
 ```
-- commit:
+- First Commit:
 ```
   echo "# <new-repository-name" >> README.md
   git init
