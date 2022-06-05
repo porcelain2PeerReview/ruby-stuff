@@ -33,7 +33,7 @@ Example of config file in .ssh directory
 ```
   example: start-dev.sh <desired-container-name>
 ```
-- login to the docker container: 
+- login to the docker container: <br>
 ``
   sudo docker exec -it <container-name> bash
 ``
