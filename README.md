@@ -54,7 +54,7 @@ curl -u '<user-name>' -H "Authorization: token <pat-token>" https://api.github.c
   git add README.md
   git commit -m "first commit"
   git branch -M main
-  git remote add origin git@github.com:<owner/user-name>/<repo-name>.git
+  git remote add origin git@github.com:<owner>/<repo-name>.git
   git push -u origin main
 ```
   
