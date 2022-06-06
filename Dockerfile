@@ -4,9 +4,10 @@ RUN apt-get update \
   && apt-get install -y npm \
   && npm install -g yarn \
   && apt-get install libsqlite3-dev -y \
-  && apt install ruby-dev -y \
+  && apt-get install ruby-dev -y \
+  && apt-get install vim -y \
   && mkdir -p /var/appi \
-  && mkdir -p ~/.ssh
+  && mkdir -p /root/.ssh
 
 WORKDIR /var/app
 COPY ./Gemfile /var/app
