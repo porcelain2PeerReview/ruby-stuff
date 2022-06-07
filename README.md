@@ -8,23 +8,9 @@ setting up a simple default dev environment for the ol ruby on rails
   - .ssh key pair generated and available in your .ssh location <br> 
   - Public key added to github  <br> 
   - PAT (Personal Access Token) to create repository remotely <br> 
-  - Config file setup to reference your private key <br> 
   - Proper permissions set on your private key (600 will work fine: chmod 600 ~/.ssh/<private-key>) <br> 
   - Running all docker scripts from the perspective of your user you wish to dev on <br> 
   
-Example of config file in .ssh directory <br>
-  
- ```
- Host github.com
-    User <user-email> 
-    Port 22 
-    Hostname github.com 
-    IdentityFile ~/.ssh/<private-key> 
-    TCPKeepAlive yes 
-    IdentitiesOnly yes 
-    UserKnownHostsFile /dev/null 
-    StrictHostKeyChecking no 
-```
     
 # Local Docker Dev Environment Setup
 
@@ -32,7 +18,7 @@ Example of config file in .ssh directory <br>
 - Clone the repository to your local directory of choosing
 - run the startup script, including the name of your development container <br>
 ```
-  example: start-dev.sh <desired-container-name>
+  example: start-dev.sh <private-key-name> <desired-container-name>
 ```
 - login to the docker container: <br>
 ```
