@@ -6,19 +6,21 @@ RUN apt-get update \
   && apt-get install libsqlite3-dev -y \
   && apt-get install ruby-dev -y \
   && apt-get install vim -y \
-  && mkdir -p /var/appi \
-  && mkdir -p /root/.ssh
-
-WORKDIR /var/app
-COPY ./Gemfile /var/app
-
-RUN gem update bundler && bundle install
+  && mkdir -p /var/app \
+  && useradd -ms /bin/bash railsdev \
+  && chown railsdev:railsdev /var/app
 
 EXPOSE 3000
 
-# RUN rails new tutorial
+COPY ./Gemfile /var/app
+
+USER railsdev
 
 WORKDIR /var/app
+
+RUN gem update bundler && bundle install
+
+# RUN rails new tutorial
 
 # CMD rails s -b 0.0.0.0 -p 3000
 CMD /bin/bash
