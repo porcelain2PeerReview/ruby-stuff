@@ -1,6 +1,6 @@
-ARG USER_ID=1000
-
 FROM ruby:latest
+
+ARG USER_ID=1000
 
 ENV USER_ID=$USER_ID
 
