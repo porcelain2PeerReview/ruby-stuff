@@ -1,8 +1,8 @@
+ARG USER_ID=1000
+
 FROM ruby:latest
 
-ARG USER_ID=1000
 ENV USER_ID=$USER_ID
-
 
 RUN useradd -u $USER_ID -ms /bin/bash railsdev
 
@@ -19,15 +19,10 @@ EXPOSE 3000
 
 COPY ./Gemfile /var/app
 
-RUN wget https://go.microsoft.com/fwlink/?LinkID=760868 |
-  && sudo apt-get install code*
-
 USER railsdev
 
 WORKDIR /var/app
 
 RUN gem update bundler && bundle install
-
-RUN rails new tutorial
 
 CMD /bin/bash
